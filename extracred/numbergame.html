@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Number Game</title>
+<style>
+.bottom {
+position: fixed;
+bottom: 0;
+height: 30;
+width: 100%;
+text-align: center;
+}
+.bottom2 {
+position: fixed;
+left: 0;
+height: 30;
+bottom: 0;
+width: 100%
+text-align: left;
+}
+.button {
+color: black;
+border: 2px solid black;
+background-color: white;
+padding: 1px 75px;
+font-size: 25px;
+cursor: pointer;
+display: inline-block;
+}
+.button:hover {
+background: gray;
+color: white;
+}
+</style>
+</head>
+<body background="bground.jpeg">
+<form method="get" action="number.py">
+<center>
+<h1><font size="7" color="indigo" style="font-family:helvetica">The Number Game</font></h1>
+<font size="5" style="font-family:sans-serif">
+<hr>
+<div style="background-color:white">
+<b>The website will think of a random number from 1 to 999, inclusive. Your goal is to guess it.</b><br>
+Input a number and the computer will tell you if it's too high or too low.<br>
+Also, it will remember your previous guesses and help you narrow down your choices.<br>
+As you would expect, if you get the number, you win!<br>
+Try to win with a small number of guesses. Don't worry, it keeps track for you.<br>
+</div><hr>
+</font><br>
+<a class="button" style="text-decoration:none" href="http://homer.stuy.edu/~cye10/extracred/number.py?whatever=Begin+Game"><font size="6"><b>Play</b></font></a>
+</center>
+<div class="bottom2"><font size="5">
+It was such a <b>nightmare</b> debugging this. ;-;
+</font></div>
+<div class="bottom">
+<button type="button" onclick="alert('Made by Cullen Ye :)')">Credits</button>
+</div>
+</form>
+</body>
+</html>
