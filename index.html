@@ -3,6 +3,7 @@
 <head>
 <title>Cullen's Webpage</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
     .button {
         color: black;
@@ -36,24 +37,47 @@
     }
     .grid-container {
         display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: #2F4F4F;
-        padding: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+       background-color: #3f4f4f;
+        padding: 20px;
     }
-
     .grid-item {
+        display: block;
+        text-decoration: none;
+        color: inherit;
         background-color: rgba(255, 255, 255, 0.8);
         border: 1px solid rgba(0, 0, 0, 0.8);
         padding: 20px;
-        font-size: 30px;
+        font-size: clamp(16px, 2vw, 30px);
         text-align: center;
+        border-radius: 8px;
+        box-sizing: border-box;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .grid-item:hover {
+        background-color: rgba(220, 220, 220, 0.9);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .grid-title {
+        font-weight: 600;
+        font-size: 1em;
+        margin-bottom: 4px;
+    }
+    .grid-extra {
+        font-size: 0.75em;
+        color: #555;
+        line-height: 1.2;
     }
 </style>
 </head>
-<body background="index.jpeg">
+<body background="index.jpeg" class="pt-4 px-3">
     <center>
         <font size="5">
-        <h1 style="font-family:helvetica;">Welcome.</h1>
+        <h1 style="font-family:helvetica">
+            <b>Welcome.</b>
+        </h1>
         </font><hr>
     </center>
     <font size="6">
@@ -66,25 +90,25 @@
             Hello! I'm <b>Cullen Ye</b>.
             <ul>
                 <li>
-                    I'm currently pursuing a Master of Divinity with a concentration in Apologetics and Philosophy at <a href="https://en.wikipedia.org/wiki/Southern_Baptist_Theological_Seminary" target="_blank">The Southern Baptist Theological Seminary</a>, expecting to graduate in 2026.
+                    I'm currently pursuing a Master of Divinity with a concentration in Apologetics and Philosophy at <a href="https://en.wikipedia.org/wiki/Southern_Baptist_Theological_Seminary" class="text-decoration-none" target="_blank" >The Southern Baptist Theological Seminary</a>, expecting to graduate in 2026.
                 </li>
                 <li>
-                    I serve as the Pastoral Staff Intern at <a href="http://bccc-ny.org/" target="_blank">Brooklyn Community Christian Church</a>.
+                    I serve as the Pastoral Staff Intern at <a href="http://bccc-ny.org/" class="text-decoration-none" target="_blank">Brooklyn Community Christian Church</a>.
                 </li>
                 <li>
-                    I also serve as a Brooklyn Campus Staff Member for <a href="https://seekersnyc.org/" target="_blank">Seekers Christian Fellowships</a>.
+                    I also serve as a <a href="https://seekersnyc.org/" class="text-decoration-none" target="_blank">Seekers</a> Brooklyn Campus Staff for <a href="https://uyai.org/" class="text-decoration-none" target="_blank">Urban Youth Alliance International</a>.
                 </li>
                 <li>
-                    I graduated <i>summa cum laude</i> from <a href="https://en.wikipedia.org/wiki/University_of_Michigan" target="_blank">The University of Michigan</a> in 2024, with a BSE in Computer Science and a minor in Philosophy.
+                    I graduated <i>summa cum laude</i> from <a href="https://en.wikipedia.org/wiki/University_of_Michigan" class="text-decoration-none" target="_blank">The University of Michigan</a> in 2024, with a BSE in Computer Science and a minor in Philosophy.
                 </li>
                 <ul>
                     <li>
-                        In college, I was a Student Leader at <a href="https://www.anchorcollegechurch.org/" target="_blank">Anchor College Church</a>, a member of the UMich Powerlifting Club, and a Blue Market Employee.
+                        In college, I was a Student Leader at <a href="https://www.anchorcollegechurch.org/" class="text-decoration-none" target="_blank">Anchor College Church</a>, a member of the UMich Powerlifting Club, and a Blue Market Employee.
                     </li>
                 </ul>
 
                 <li>
-                    I'm from Brooklyn, New York, and I graduated from <a href="https://en.wikipedia.org/wiki/Stuyvesant_High_School" target="_blank">Stuyvesant High School</a> in 2021.
+                    I'm from Brooklyn, New York, and I graduated from <a href="https://en.wikipedia.org/wiki/Stuyvesant_High_School"class="text-decoration-none" target="_blank">Stuyvesant High School</a> in 2021.
                 </li>
                 <ul>
                     <li>
@@ -121,94 +145,68 @@
         <font size="6" style="font-family:sans-serif">
             <ul>
                 <li>
-                    I regularly preach at <a href="http://bccc-ny.org/" target="_blank">Brooklyn Community Christian Church</a>.
+                    I regularly preach at <a href="http://bccc-ny.org/" class="text-decoration-none" target="_blank">Brooklyn Community Christian Church</a>.
                 </li>
                 <li>
-                    I've also preached for <a href="https://seekersnyc.org/" target="_blank">Seekers</a>,
-                    <a href="https://annarborvineyard.org/" target="_blank">Vineyard Church</a>,
-                    <a href="https://www.aaccc.org/?lang=en" target="_blank">Ann Arbor Chinese Christian Church</a>, and
-                    <a href="https://www.instagram.com/eng.camp/?hl=en" target="_blank">Panama English Camp</a>.  
+                    I've also preached for <a href="https://seekersnyc.org/" class="text-decoration-none" target="_blank">Seekers</a>,
+                    <a href="https://annarborvineyard.org/" class="text-decoration-none" target="_blank">Vineyard Church</a>,
+                    <a href="https://www.aaccc.org/?lang=en" class="text-decoration-none" target="_blank">Ann Arbor Chinese Christian Church</a>, and
+                    <a href="https://www.instagram.com/eng.camp/?hl=en" class="text-decoration-none" target="_blank">Panama English Camp</a>.  
                 </li>
             </ul>
-            Here is a sample of some of my sermons from BCCC:<br /><br />
-        
+            Here is a sample of some of my sermons from BCCC:<br>
         </font>
 
         <div class="grid-container">
-            <div class="grid-item">
-                <b>False Assurance</b> (42 min)<br>
-                <font size="5"><i>(Jer 7:1-11, John 2:13-22, Heb 10:19-23)</i></font><br>
-                <font size="5">[Given on <i>August 25, 2025</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/2Ash0jJYsgQ" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>Beloved Children of God</b> (43 min)<br>
-                <font size="5"><i>(Hos 11, 1 John 3:1-3)</i></font><br>
-                <font size="5">[Given on <i>July 27, 2025</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/zH1p2-nd1xo" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>To Whom Shall We Go?</b> (38 min)<br>
-                <font size="5"><i>(John 6:25-71)</i></font><br>
-                <font size="5">[Given on <i>May 25, 2025</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/6XEgdEUBzlo" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>Looking Upward, Not Inward</b> (43 min)<br>
-                <font size="5"><i>(Dan 2-4)</i></font><br>
-                <font size="5">[Given on <i>March 23, 2025</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/PD7UXnF4emQ" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>Bearing Your Cross</b> (43 min)<br>
-                <font size="5"><i>(Lam 1:12-19, Luke 14:27-33, Lam 3:19-27)</i></font><br>
-                <font size="5">[Given on <i>February 2, 2025</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/pPfdSd9EDKE" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>God Hates</b> (44 min)<br>
-                <font size="5"><i>(1 Cor 6:9-11, Rom 2:2-5, 1 John 4:7-12)</i></font><br>
-                <font size="5">[Given on <i>July 28, 2024</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/M26LiUNMtvs" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>Losing The Fire</b> (39 min)<br>
-                <font size="5"><i>(2 Tim 1:3-7, Rev 2:2-5, Phil 3:7-11)</i></font><br>
-                <font size="5">[Given on <i>June 23, 2024</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/_Awf_QfsGyo" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>Holy, Holy, Holy</b> (43 min)<br>
-                <font size="5"><i>(Mark 10:17-27, Isa 6:1-7)</i></font><br>
-                <font size="5">[Given on <i>May 19, 2024</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/Vjz1zXO3pp8" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>Fighting The Good Fight</b> (45 min)<br>
-                <font size="5"><i>(1 Tim 6:11-16, Phil 3:12-16)</i></font><br>
-                <font size="5">[Given on <i>January 7, 2024</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/R46OLqfylLk" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>The God Who Stoops</b> (41 min)<br>
-                <font size="5"><i>(Ps 113)</i></font><br>
-                <font size="5">[Given on <i>December 17, 2023</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/T7DwQI-2uKs" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>A New Chapter</b> (54 min)<br>
-                <font size="5"><i>(Exod 2:11-15, Heb 11:23-27)</i></font><br>
-                <font size="5">[Given on <i>August 20, 2023</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://youtu.be/k7i0RtDDkJs" target="_blank">Watch</a>
-            </div>
-            <div class="grid-item">
-                <b>Being A Wretched Man</b> (40 min)<br>
-                <font size="5"><i>(Rom 7:13-8:4)</i></font><br>
-                <font size="5">[Given on <i>May 1, 2022</i>.]</font><br>
-                <a class="button" style="text-decoration:none" href="https://www.youtube.com/watch?v=B1-NN3t54hw" target="_blank">Watch</a>
-            </div>
+            <a href="https://youtu.be/2Ash0jJYsgQ" target="_blank" class="grid-item">
+                <div class="grid-title">False Assurance</div>
+                <div class="grid-extra"><i>(Jer 7:1-11, John 2:13-22, Heb 10:19-23)<br></i>42 min • Aug 25, 2025</div>
+            </a>
+            <a href="https://youtu.be/zH1p2-nd1xo" target="_blank" class="grid-item">
+                <div class="grid-title">Beloved Children of God</div>
+                <div class="grid-extra"><i>(Hos 11, 1 John 3:1-3)<br></i>43 min • July 27, 2025</div>
+            </a>
+            <a href="https://youtu.be/6XEgdEUBzlo" target="_blank" class="grid-item">
+                <div class="grid-title">To Whom Shall We Go?</div>
+                <div class="grid-extra"><i>(John 6:25-71)<br></i>38 min • May 25, 2025</div>
+            </a>
+            <a href="https://youtu.be/PD7UXnF4emQ" target="_blank" class="grid-item">
+                <div class="grid-title">Looking Upward, Not Inward</div>
+                <div class="grid-extra"><i>(Dan 2-4)<br></i>43 min • March 23, 2025</div>
+            </a>
+            <a href="https://youtu.be/pPfdSd9EDKE" target="_blank" class="grid-item">
+                <div class="grid-title">Bearing Your Cross</div>
+                <div class="grid-extra"><i>(Lam 1:12-19, Luke 14:27-33, Lam 3:19-27)<br></i>43 min • February 2, 2025</div>
+            </a>
+            <a href="https://youtu.be/M26LiUNMtvs" target="_blank" class="grid-item">
+                <div class="grid-title">God Hates</div>
+                <div class="grid-extra"><i>(1 Cor 6:9-11, Rom 2:2-5, 1 John 4:7-12)<br></i>43 min • July 28, 2024</div>
+            </a>
+            <a href="https://youtu.be/_Awf_QfsGyo" target="_blank" class="grid-item">
+                <div class="grid-title">Losing The Fire</div>
+                <div class="grid-extra"><i>(2 Tim 1:3-7, Rev 2:2-5, Phil 3:7-11)<br></i>39 min • June 23, 2024</div>
+            </a>
+            <a href="https://youtu.be/Vjz1zXO3pp8" target="_blank" class="grid-item">
+                <div class="grid-title">Holy, Holy, Holy</div>
+                <div class="grid-extra"><i>(Mark 10:17-27, Isa 6:1-7)<br></i>43 min • May 19, 2024</div>
+            </a>
+            <a href="https://youtu.be/R46OLqfylLk" target="_blank" class="grid-item">
+                <div class="grid-title">Fighting The Good Fight</div>
+                <div class="grid-extra"><i>(1 Tim 6:11-16, Phil 3:12-16)<br></i>45 min • January 7, 2024</div>
+            </a>
+            <a href="https://youtu.be/T7DwQI-2uKs" target="_blank" class="grid-item">
+                <div class="grid-title">The God Who Stoops</div>
+                <div class="grid-extra"><i>(Ps 113)<br></i>41 min • December 17, 2023</div>
+            </a>
+            <a href="https://youtu.be/k7i0RtDDkJs" target="_blank" class="grid-item">
+                <div class="grid-title">A New Chapter</div>
+                <div class="grid-extra"><i>(Exod 2:11-15, Heb 11:23-27)<br></i>54 min • August 20, 2023</div>
+            </a>
+            <a href="https://youtu.be/B1-NN3t54hw" target="_blank" class="grid-item">
+                <div class="grid-title">Being A Wretched Man</div>
+                <div class="grid-extra"><i>(Rom 7:13-8:4)<br></i>40 min • May 1, 2022</div>
+            </a>
         </div>
-
     </div>
     <br>
     <hr>
